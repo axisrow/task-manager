@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Task Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron mt-5">
+            <h1 class="display-4">Welcome to the Intelligent Task Manager!</h1>
+            <p class="lead">This is a simple and efficient way to manage your tasks.</p>
+            <hr class="my-4">
+            <p>To get started, log in or sign up.</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Log In</a>
+            <a class="btn btn-secondary btn-lg" href="{{ url_for('signup') }}" role="button">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
