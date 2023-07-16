@@ -16,11 +16,17 @@
         <input type="submit" value="Add Task">
     </form>
 
-    <ul>
     {% for task in tasks %}
-        <li>{{ task.title }} - {{ task.subtasks }}</li>
+        <h3>{{ task.title }}</h3>
+        {% set subtask_list = task.subtasks.split(',') %}
+        <ul>
+            {% for subtask in subtask_list %}
+            <li>{{ subtask }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tasks yet.</p>
     {% endfor %}
-    </ul>
 
     <p><a href="{{ url_for('logout') }}">Logout</a></p>
 </body>
